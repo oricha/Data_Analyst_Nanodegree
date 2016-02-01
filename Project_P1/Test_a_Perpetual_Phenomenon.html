@@ -243,14 +243,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong><em>Descriptive Statistics</em></strong></p>
 <p>In this demostration we want to see if there's a significant diference between the average time for the congruent population and the average time of the incongruent population. I have chosen to perform a dependent sample two tailed t test to evaluate the null and alternate hypothesis.</p>
-<ul>
-<li>Sample size n = 24</li>
-<li>Degree of freedom Df= n-1 =23</li>
-</ul>
 <p>In this case we use a two-tail direction then using a alfa level of .005 and directional two tail found the t-critical</p>
-<ul>
-<li>t-critical for alfa=0.005  is 2.069</li>
-</ul>
 <table>
 <thead><tr>
 <th></th>
@@ -288,7 +281,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[45]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -323,7 +316,7 @@ Median of Congruent : 14.3565
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[46]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="nb">print</span> <span class="p">(</span><span class="s">&quot;Mean of Incongruent :&quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dataFrame</span><span class="p">[</span><span class="s">&quot;Incongruent&quot;</span><span class="p">]))</span>
@@ -352,13 +345,81 @@ Median of Incongruent : 21.0175
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[47]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre> 
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span> <span class="p">(</span><span class="s">&quot;Standar Deviation of Congruent: &quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Congruent&quot;</span><span class="p">]))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Standar Deviation of Congruent:  3.5593579576451955
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span> <span class="p">(</span><span class="s">&quot;Standar Deviation of Incongruent: &quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Incongruent&quot;</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Standar Deviation of Incongruent:  4.797057122469138
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">print</span> <span class="p">(</span><span class="s">&quot;Point estimate :&quot;</span><span class="p">,</span> <span class="n">statistics</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Incongruent&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Congruent&quot;</span><span class="p">]))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Point estimate : 7.96479166667
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -374,7 +435,7 @@ Median of Incongruent : 21.0175
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[50]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span class="c"># Causes plots to display within the notebook rather than in a new window</span>
@@ -401,11 +462,11 @@ Median of Incongruent : 21.0175
 </div>
 </div>
 
-<div class="output_area"><div class="prompt output_prompt">Out[18]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[50]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.text.Text at 0x107b9f5c0&gt;</pre>
+<pre>&lt;matplotlib.text.Text at 0x107cfc630&gt;</pre>
 </div>
 
 </div>
@@ -532,8 +593,7 @@ SR1h4EtSRxj4ktQRBr4kdcT/B1Hbf6sq040fAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><em>Visualitation annotation</em></strong>
-*The Incongruent values are always higher than Congruent</p>
+<p>The Incongruent population's values are mostly higher than the Congruente population's values, this suggests that when the words do not match the color, takes longer give the answer.</p>
 
 </div>
 </div>
@@ -552,14 +612,83 @@ SR1h4EtSRxj4ktQRBr4kdcT/B1Hbf6sq040fAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong><em>Result Section</em></strong></p>
-<p>*Compute t-statistic</p>
+<ol>
+<li><p>Descriptive statistics</p>
+</li>
+<li><p>Sample size n = 24</p>
+</li>
+<li>Degree of freedom Df= n-1 =23</li>
+<li><p>t-critical for alfa=0.005  is 2.069</p>
+</li>
+<li><p>Inferential Statistics  (video9-10)</p>
+</li>
+</ol>
+<p>poner apa Style CI video 12
+<em>mean diference X-u</em>Compute t-statistic</p>
 <p>*Draw t-distribution. Does fall in the critical region ?</p>
 <p>*What is the P Value for this t</p>
 <p>*Are this result statistically  significant? YES/NO</p>
-<p>*Are this result meaningfull ?</p>
+<p>*Are this result meaningfull ?
+Compute r2  (correlation measures)</p>
 <p>*Compute the Margin or error for the 95%</p>
+<ol>
+<li>Effect size measures</li>
+</ol>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># Calculating Standard deviation.</span>
+<span class="n">st_dev</span> <span class="o">=</span> <span class="p">(</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Incongruent&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Congruent&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="c"># point estimate for difference in population mean  i.e μinc - μcon</span>
+<span class="n">point_estimate</span> <span class="o">=</span> <span class="p">(</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Incongruent&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">dframe</span><span class="p">[</span><span class="s">&quot;Congruent&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c"># Calculating Standard error.</span>
+<span class="n">st_error</span> <span class="o">=</span> <span class="n">st_dev</span><span class="o">/</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+
+<span class="c"># getting the t critical value for 95% CI.</span>
+<span class="n">t_critical</span><span class="o">=</span> <span class="mf">2.06</span>
+
+<span class="c"># Calculating the Margin of error </span>
+<span class="n">margin_Error</span><span class="o">=</span><span class="n">t_critical</span><span class="o">*</span><span class="n">st_error</span>
+
+<span class="c"># 95% Confidence Interval = (PE+margin_Error, PE-margin_Error)</span>
+<span class="n">upper_bound</span> <span class="o">=</span> <span class="n">point_estimate</span> <span class="o">+</span> <span class="n">margin_Error</span>
+<span class="n">lower_bound</span> <span class="o">=</span> <span class="n">point_estimate</span> <span class="o">-</span> <span class="n">margin_Error</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s">&quot;95% Confidence Interval is :&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">lower_bound</span> <span class="p">,</span><span class="n">upper_bound</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>95% Confidence Interval is : (5.9191526790232851, 10.010430654310049)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Question-6-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">Question 6 Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!<a class="anchor-link" href="#Question-6-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -568,7 +697,19 @@ SR1h4EtSRxj4ktQRBr4kdcT/B1Hbf6sq040fAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Question-6-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">Question 6 Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!<a class="anchor-link" href="#Question-6-Optional:-What-do-you-think-is-responsible-for-the-effects-observed?-Can-you-think-of-an-alternative-or-similar-task-that-would-result-in-a-similar-effect?-Some-research-about-the-problem-will-be-helpful-for-thinking-about-these-two-questions!">&#182;</a></h3>
+<h3 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="References-:">References :<a class="anchor-link" href="#References-:">&#182;</a></h3><ul>
+<li>Spreedsheet </li>
+</ul>
+
 </div>
 </div>
 </div>
